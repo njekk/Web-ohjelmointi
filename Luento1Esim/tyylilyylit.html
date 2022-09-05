@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--external style:-->
-    
+    <link rel="stylesheet" href="tyyli.css">
+
     <title>Tyylitestit</title>
     <!--Internal style:-->
-     <style>
-         /*Täällä on css:ssää. Tämä on kommentti*/
-         /*perussyntaksi 
+    <style>
+        /*Täällä on css:ssää. Tämä on kommentti*/
+        /*perussyntaksi 
          valitsin {
              ominaisuus: arvo;
+             ominaisuus2: arvo;
          }*/
 
+        p {
+            background-color: blueviolet;
+            color: beige;
+            text-align: center;
+        }
 
+        h1 {
+
+            font-size: 145;
+            text-decoration-color: blue;
+            text-shadow: 50;
+            width: 75%;
+        }
+
+        h2 {
+            text-align-last: auto;
+        }
+        
     </style>
 </head>
+
 <body>
     <h1>Ensimmäisen tason otsikko</h1>
     <!--inline style-->
     <p>Muutetaan tämän tyyliä</p>
     <h2>Toisen tason otsikko</h2>
     <!--kokeillaan span, b, strong ja em -elementin käyttöä p-elementin:n sisällä-->
-    <p>Muokataan tämän tekstin tyylejä eri tavoilla</p>
+    <p>Muokataan <b>tämän</b> <em>tekstin</em> <u>tyylejä</u> eri tavoilla</p>
+    <p>Testataan <span style="border: 2px solid green;"> span</span> elementtiä</p>
     <!--Eri tapoja tehdä rivitystyä-->
-   
-    
-    
-    <a href="https://www.w3schools.com/css/css_text.asp" >Tekstiin liittyviä muotoiluja löytyy täältä</a>
+    <p>rivit 
+        ei
+        toimi 
+        näin 
+        :(
+    </p>
+    <p>vaan <br>näin<br> </p>
+
+    <pre>
+        tämä
+        on  
+
+                hämy        
+                elementti 
+    </pre>
+
+
+    <a href="https://www.w3schools.com/css/css_text.asp">Tekstiin liittyviä muotoiluja löytyy täältä</a>
 </body>
+
 </html>

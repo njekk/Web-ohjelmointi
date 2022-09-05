@@ -3,9 +3,38 @@
 <head>
     <title>Listat ja taulut</title>
     <style>
+        ul{
+            list-style-type: circle;
+            list-style-position: inside;
+            list-style-image: url(h.png);
+        }
+        ol{
+            list-style-type: upper-roman;
+        }
+        dt{
+            background-color: black;
+        }
+        dd{
+            color: azure;
+            background-color: blue;
+        }
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        
+        td{
+            background-color: yellow;
+            border: 2px solid black;
+        }
 
         
         /*Lisätään taulukolle tyylejä tähän*/
+
        
         /*poistetaan "tyhjä ilma" väleistä*/
 
@@ -14,15 +43,54 @@
 <body>
     <h1>Listat</h1>
     <p>Unordered list</p>
-    
+    <ul>
+        <li>eka</li>
+        <li>toka</li>
+        <li>kolmas</li>
+        <li>gasrgasgargasegaseg</li>
+    </ul>
     
     <p>Ordered list</p>
+    <ol start="2" reversed>
+        <li>eka</li>
+        <li>toka</li>
+        <li>kolmas</li>
+    </ol>
     
     
     <p>Description list</p>
+    <dl>
+        <dt style="color: hotpink;">mökki</dt>
+        <dd>Mökki</dd>
+        <dd>Koti</dd>
+        <dt style="color: hotpink;">koti</dt>
+        <dd>kiva</dd>
+        <dd>topi</dd>
+    </dl>
     
-    <h1>Taulu</h1>
-    
+    <h1>Taulukko</h1>
+    <table>
+        <tr>
+            <th>Eka</th>
+            <th>toka</th>
+            <th>kolmas</th>
+        </tr>
+        <tr>
+            <td>1.1</td>
+            <td>1.2</td>
+            <td rowspan="2">1.3</td>
+        </tr>
+        <tr>
+            <td>2.1</td>
+            <td>2.2</td>
+            <!-- <td>2.3</td> -->
+        </tr>
+        <tr>
+            <td colspan="3">3.1</td>
+            <!-- <td>3.2</td>
+            <td >3.3</td> -->
+        </tr>
+    </table>
     
 
     
