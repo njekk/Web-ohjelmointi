@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-esimerkki: display, position ja float</title>
+    <style>
+        #inlineThis{
+            /*display: block, inline, inline-block, none
+            block - vie tilaa koko leveydeltä, joillain default arvo (esim p, div)
+            inline - ainoastaan sen verran mitä sisältö vie tilaa, joillain default(esim a, span)
+            inline-block -kuten inline, mutta ottaa huomioon marginaalit
+            none -piilottaa elementin
+            */
+            
+        }
+        #blockThis {
+        
+        }
+        .relative {
+            /*position: static, relative, fixed, absolute, sticky
+                positionilla määritetään miten elementit sijoittuvat
+                static - oletus
+                relative - sijainti suhteessa normaaliin sijaintiin
+                        Jos muut elementit on staattisia, niin tämän käyttöä
+                        ei edes huomaa
+                fixed - kiinnitetään tiettyyn kohtaan sivua
+                        voidaan säätää komennoilla left, right, bottom, up
+                absolute - fiksattu positio suhteessa lähimpään vanhempaan
+                sticky - scrollatessa pysyy paikallaan tietyssä positiossa
+            */
+
+        }
+        .fixed {
+
+        }
+        .float {
+        /*float:lla saadaan elementeistä "kelluvia" suhteessa vanhempaan 
+        float:left -elementit kelluvat vasempaan reunaan
+        float: right - elementit kelluvat oikeaan reunaan
+        float: none -default arvo
+        float: inherit -perii vanhemmalta kelluvuuden*/
+       
+        }
+        .parentToFloat {
+            height: 300px;
+            border: 5px solid green;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>CSS-esimerkki: display, position ja float</h1>
+    <div id="inlineThis">Tehdään tästä inline</div>
+    <span id="blockThis">Tehdään tästä block</span>
+    <div class="relative"><p>relative</p></div>
+    <div class="fixed"><p>fixattua</p></div>
+    <div class="parentToFloat">
+        <div class="float"><p>kelluntaa</p></div>
+        <div class="float"><p>kelluntaa</p></div>
+    </div>
+    <a href="https://www.w3schools.com/html/html_blocks.asp"> Difference between block and inline</a>
+</body>
+</html>
