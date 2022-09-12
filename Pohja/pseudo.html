@@ -10,12 +10,36 @@
         pseudo-luokilla saadaan tehtyä tyylejä eri tilanteissa. Esim pseudo-luokalla hover
         voidaan muuttaa tyylejä kun hiiri on kyseisen elementin päällä:
         */
-        
+        .hoverThis{
+            border: 5px solid green;
+        }
+        .hoverThis:hover{
+            background-color: aqua;
+            cursor: crosshair;
+        }
         /*first child-pseudoluokka muuttaa ensimmäisen p-elementin tyyliä*/
+        p:first-child{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         
         /*muuttaa joka kolmannen p-elementin tyyliä*/
-        
+        /* 2n == joka toinen */
+        p:nth-child(2n-1){  
+            background-color: yellowgreen;
+        }
         /*:link muuttaa käymättömiä linkkejä, visited käytyjä*/
+        a:link{
+            color: hotpink;
+        }
+        a:visited{
+            color: aqua;
+        }
+        body:hover{
+            background-color: blue;
+        }
+        body{
+            background-color: blueviolet;
+        }
         </style>
 </head>
 <body>
