@@ -1,0 +1,10 @@
+ol{
+    cursor: url(yllatus.png) 2 2, auto;
+    color: blue;
+}
+#images{
+    list-style-image: url(yllatus.png);
+}
+h1{
+    width: 400%;
+}
