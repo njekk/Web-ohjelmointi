@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML lyhenne sanoista eXtensible Markup Language
+    - merkintäkieli, kuten html
+    - sitä käytetään tiedon tallentamiseen ja siirtämiseen
+    - koostuu samantyyppisistä elementeistä, kuten html
+        - mutta ei ole "kiinteitä" -tyyppejä
+    - ajatuksena on se, että elementit kuvaa kohdetta
+    - elementeillä voi olla myös attribuutteja html:lläkin
+-->
+<!--XML:llä voi olla vain yksi juurielementti-->
+<tietokoneet>
+    <tietokone>
+        <malli>Macbook Pro</malli>
+        <valmistaja>Apple</valmistaja>
+        <osat>
+            <naytto>4K Retina</naytto>
+            <muisti paikka="ram">32gb</muisti>
+            <kiintolevy paikka="ssd">512gb</kiintolevy>
+            <prosessori>H1</prosessori>
+        </osat>
+    </tietokone>
+    <tietokone>
+        <malli>Macbook Pro Ultra</malli>
+        <valmistaja>Apple</valmistaja>
+        <osat>
+            <naytto>4K Retina</naytto>
+            <muisti paikka="ram">32gb</muisti>
+            <kiintolevy paikka="ssd">512gb</kiintolevy>
+            <prosessori>H1</prosessori>
+        </osat>
+    </tietokone>
+</tietokoneet>
+
+
+
+
+<!--XML tiedostojen tarkistamiseen on sellainen työkalu kuin XML-schema -->
