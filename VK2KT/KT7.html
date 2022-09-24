@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT7</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: larger;
+        }
+        input, select{
+            margin: 10px;
+            padding: 5px;
+        }
+        input[type=text], input[type=password]{
+            width: 95%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://animalhospital.freemyip.com/test.php"
+    method="GET" target="_blank">
+    <fieldset>
+        <label for="name">Nimi</label>
+        <input type="text" id="name" name="nimi"><br>
+        <label for="vuosikurssi">Vuosikurssi</label>
+        <input type="password" id="password" name="password"><br>
+    </fieldset><br>
+    <fieldset>
+        <label for="course">Kurssin nimi</label>
+        <select name="kurssi" id="course">
+            <option value="WO">Web-Ohjelmointi</option>
+            <option value="OO">Olio-Ohjelmointi</option>
+            <option value="OP">Ohjelmoinnin perusteet</option>
+        </select><br>
+        <label for="course_type">Kurssin tyyppi</label>
+        <select name="kurssityyppi" id="course_type">
+            <option value="P">Perus</option>
+            <option value="L">Laajennettu</option>
+            <option value="V">Vapaaehtoinen</option>
+        </select>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Sukupuoli</legend>
+        <input type="radio" id="rb1" name="mies"><label for="rb3">Mies</label>
+        <input type="radio" id="rb2" name="nainen"><label for="rb2">Nainen</label>
+        <input type="radio" id="rb3" name="muu"><label for="rb3">Muu</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Harrastukset</legend>
+        <input type="checkbox" name="hobbies-uinti" id="cb1" ><label for="cb1">Uinti</label><br>
+        <input type="checkbox" name="hobbies-kalastus" id="cb2"><label for="cb2">Kalastus</label><br>
+        <input type="checkbox" name="hobbies-juoksu" id="cb3" checked><label for="cb3">Juoksu</label><br>
+        <input type="checkbox" name="hobbies-tennis" id="cb4"><label for="cb4">Tennis</label><br>
+
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
