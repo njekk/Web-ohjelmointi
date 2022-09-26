@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<style>
+  .container {
+    border: 5px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    /*tämä määrittää containerin käyttämään flex-layoutia*/
+    display: flex;
+    /*The main idea behind the flex layout is to give the container 
+  the ability to alter its items’ width/height (and order) to best 
+  fill the available space (mostly to accommodate to all kind of 
+  display devices and screen sizes). A flex container expands items 
+  to fill available free space or shrinks them to prevent overflow.*/
+  flex-direction:row;
+  /* flex-direction: row, row-reverse, column; column-reverse; */
+  /* flex-wrap -rivittää alkiot*/
+  flex-wrap: wrap;
+  }
+  
+  .container div{ /*divs inside container-1 class*/
+    border: 4px hotpink solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+  }
+
+  /*item spesific styles:*/
+  .item-1{
+    order: 5;
+  /*order - määrittää järjestyksen*/
+  /*flex-grow/shrink - määrittää koon suhteessa muihin*/
+  flex-grow: 2;
+  /*flex-basis - määrittää koon flex-itemille */
+  }
+  .item-2{
+    flex-grow: 5;
+    
+  }
+  .item-3{
+    flex-grow: 15;
+  }
+
+  body {
+    background-color:wheat;
+  }
+
+  h1 {
+    background-color: Blue;
+    width: 50%;
+    color: red;
+    font-family: Verdana
+  }
+
+  p {
+    color: red;
+    font-family: Arial;
+    text-align: right;
+  }
+
+  h2 {
+    width: 50%;
+    color: red;
+  }
+</style>
+
+<body>
+
+  <div class="container">
+    <div class="item-1">
+      <h3>
+        First
+      </h3>
+      <p>
+        Video provides a powerful way to help you prove your point.
+      </p>
+    </div>
+    <div class="item-2">
+      <h3>
+        Second
+      </h3>
+      <p>
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the
+        embed code for the video you want to add.
+      </p>
+    </div>
+    <div class="item-3">
+      <h3>
+        Third
+      </h3>
+      <p>
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the
+        embed code for the video you want to add.
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

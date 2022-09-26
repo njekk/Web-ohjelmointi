@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid-tutorial-esim1</title>
+    <style>
+        .wrapper { 
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr 1fr; /*fractions*/
+          grid-template-columns: repeat(4,1fr); /*vrt edelliseen*/
+          grid-gap: 2%;
+          }
+        .wrapper > div {
+          font-size:xx-large;
+          padding: .5em;
+          background: green;
+          text-align: center;
+        }
+        .wrapper > div:hover {
+            background: lightgreen;
+        }  
+        </style>
+        
+</head>
+<body>
+    <!doctype html>
+<div class="wrapper">
+</div>
+</body>
+</html>

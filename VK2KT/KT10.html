@@ -59,11 +59,17 @@
             <td>
                 <!-- multiple toimii pitämällä CTRL-näppäintä pohjassa valittaessa useampaa kurssia -->
                 <select multiple name="kurssi[]" id="course">
-                    <option value="WO-ETA">Web-Ohjelmointi, ETA</option>
-                    <option value="WO-ETB">Web-Ohjelmointi, ETB</option>
-                    <option value="OO-ETA">Olio-Ohjelmointi, ETA</option>
-                    <option value="OO-ETB">Olio-Ohjelmointi, ETB</option>
-                    <option value="OP-M">Ohjelmoinnin perusteet, monimuoto</option>
+                    <optgroup label="ETA"> 
+                        <option value="OO-ETA">Olio-Ohjelmointi, ETA</option>
+                        <option value="WO-ETA">Web-Ohjelmointi, ETA</option>
+                    </optgroup>
+                    <optgroup label="ETB">
+                        <option value="WO-ETB">Web-Ohjelmointi, ETB</option>
+                        <option value="OO-ETB">Olio-Ohjelmointi, ETB</option>
+                    </optgroup>
+                    <optgroup label="Monimuoto">
+                        <option value="OP-M">Ohjelmoinnin perusteet, monimuoto</option>
+                    </optgroup>
                 </select>
             </td>
         </tr>

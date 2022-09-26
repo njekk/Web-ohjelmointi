@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<style>
+.wrapper{
+  display:grid;
+  /*kolme saraketta?*/
+  grid-gap:1em;
+  /*grid-auto-rows: 100px;*/ /*joustamaton tekstin pituuden suhteen, miten tehdään joustavampi?*/
+
+}
+.nested{
+  display:grid;
+  /*3x3 laatikolle tyyli*/
+}
+
+.nested > div {
+  /*mustat reunat ja vähän sisennystä(padding)*/
+}
+
+.wrapper > div {
+  background:#eee;
+  padding:1em;
+}
+/* Miten tähän saataisiin joku tyyli, jolla joka toinen laatikoista on vaaleampi?*/
+
+</style>
+<body>
+<div class="wrapper">
+<div>
+Video provides a powerful way to help you prove your point.
+</div>
+<div>
+Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. 
+</div>
+<div>
+Video provides a powerful way to help you prove your point.
+</div>
+<div>
+Video provides a powerful way to help you prove your point.
+</div>
+<div>
+Video provides a powerful way to help you prove your point.
+</div>
+<div>
+Video provides a powerful way to help you prove your point.
+</div>
+<div>
+Video provides a powerful way to help you prove your point.
+</div>
+<div class="nested">
+Lisätään tänne 3x3taulukko
+</div>
+</div>
+</body>
+
+</html>
