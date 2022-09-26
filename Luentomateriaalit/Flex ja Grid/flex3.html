@@ -8,7 +8,7 @@
     padding: 10px;
     height: 700px;
     display: flex;
-
+    margin: -8px;
 
     /*flex-wrap -sisällön rivitys*/
     flex-wrap: wrap;
@@ -24,6 +24,16 @@
     padding: 10px;
     width: 200px;
     height: fit-content;
+  }
+
+  .container-3-box{
+    flex-basis: 20%;
+  }
+  .container-3-box:first-child{
+    flex-basis: 100%;
+  }
+  .container-3-box:last-child{
+    flex-basis: 100%
   }
 
   body {

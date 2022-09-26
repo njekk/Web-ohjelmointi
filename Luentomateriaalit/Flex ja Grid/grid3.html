@@ -2,56 +2,78 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <style>
-.wrapper{
-  display:grid;
-  /*kolme saraketta?*/
-  grid-gap:1em;
-  /*grid-auto-rows: 100px;*/ /*joustamaton tekstin pituuden suhteen, miten tehdään joustavampi?*/
+  .wrapper {
+    display: grid;
+    /*kolme saraketta?*/
+    grid-template-columns: 40% 30% 30%;
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 1em;
+    /*grid-auto-rows: 100px;*/
+    /*joustamaton tekstin pituuden suhteen, miten tehdään joustavampi?*/
 
-}
-.nested{
-  display:grid;
-  /*3x3 laatikolle tyyli*/
-}
+  }
 
-.nested > div {
-  /*mustat reunat ja vähän sisennystä(padding)*/
-}
+  .nested {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    /*3x3 laatikolle tyyli*/
+  }
 
-.wrapper > div {
-  background:#eee;
-  padding:1em;
-}
-/* Miten tähän saataisiin joku tyyli, jolla joka toinen laatikoista on vaaleampi?*/
+  .nested>div {
+    /*mustat reunat ja vähän sisennystä(padding)*/
+    border: 2px solid black;
+    background-color: hotpink;
+    padding: 20px;
+    text-align: center;
+  }
 
+  .wrapper>div {
+    background: #eee;
+    padding: 1em;
+  }
+
+  /* Miten tähän saataisiin joku tyyli, jolla joka toinen laatikoista on vaaleampi?*/
 </style>
+
 <body>
-<div class="wrapper">
-<div>
-Video provides a powerful way to help you prove your point.
-</div>
-<div>
-Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. 
-</div>
-<div>
-Video provides a powerful way to help you prove your point.
-</div>
-<div>
-Video provides a powerful way to help you prove your point.
-</div>
-<div>
-Video provides a powerful way to help you prove your point.
-</div>
-<div>
-Video provides a powerful way to help you prove your point.
-</div>
-<div>
-Video provides a powerful way to help you prove your point.
-</div>
-<div class="nested">
-Lisätään tänne 3x3taulukko
-</div>
-</div>
+  <div class="wrapper">
+    <div>
+      Video provides a powerful way to help you prove your point.
+    </div>
+    <div>
+      Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the
+      embed code for the video you want to add. You can also type a keyword to search online for the video that best
+      fits your document.
+    </div>
+    <div>
+      Video provides a powerful way to help you prove your point.
+    </div>
+    <div>
+      Video provides a powerful way to help you prove your point.
+    </div>
+    <div>
+      Video provides a powerful way to help you prove your point.
+    </div>
+    <div>
+      Video provides a powerful way to help you prove your point.
+    </div>
+    <div>
+      Video provides a powerful way to help you prove your point.
+    </div>
+    <div class="nested">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+  </div>
 </body>
 
 </html>

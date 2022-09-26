@@ -3,7 +3,8 @@
 <style>
 .wrapper{
   display:grid;
-  
+  grid-template-columns: 40% 30% 30%;
+  gap: 5px;
   /* grid-column-gap:1em;
   grid-row-gap:1em;
   */
@@ -12,6 +13,9 @@
 .wrapper > div {
   background:#eee;
   padding:1em;
+}
+.wrapper > div:nth-child(odd){
+  background-color: hotpink;
 }
 /* miten saadaan joka toinen divi vaaleammaksi?*/
 
