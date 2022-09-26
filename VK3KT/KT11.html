@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KT11</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+            grid-auto-rows:minmax(50px, auto);
+            grid-gap: 10px;
+        }
+        .wrapper > div, .wrapper > header, .wrapper > section, .wrapper > footer {
+            padding-top: 3em;
+            padding-bottom: 3em;
+            background: rgb(255, 217, 0);
+        }
+        .item-a {
+            grid-column: 1/4;
+            grid-row: 1;
+            text-align: center;
+        }
+        .item-b {
+            grid-column: 1/2;
+            grid-row: 2/5;
+            padding-left: 8px;
+        }
+        .item-c {
+            grid-column: 2/3;
+            grid-row: 2/5;
+            padding-left: 8px;
+        }
+        .item-d {
+            grid-column: 3;
+            grid-row: 2/5;
+            padding-left: 8px;
+        }
+        .item-e{
+            grid-column: 1/4;
+            grid-row: 5;
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="item-a">Tervetuloa Savoniaan</header>
+        <section class="item-b">
+            <ul>
+                <li><a href="https://www.antell.fi/round/">Ruokalista</a></li>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+
+            </ul>
+        </section>
+        <section class="item-c">valitse vasemmalta listalta jotakin</section>
+        <section class="item-d">Mainoksia</section>
+        <footer class="item-e">Yhteystiedot</footer>
+    </div>
+</body>
+</html>
