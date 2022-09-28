@@ -1,93 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KT15</title>
     <style>
-        .container{
+        .container {
             display: grid;
             grid-template-columns: repeat(2, 0.75fr);
             grid-template-rows: repeat(2, 0.75fr);
             border: 1px solid black;
             width: fit-content;
         }
-        .container > div{
+
+        .container>div {
             border: 1px solid black;
             font-size: larger;
             padding: 10px;
         }
-        body{
+
+        body {
             background-color: bisque;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
     </style>
 </head>
-<body>
-    <form action="http://animalhospital.freemyip.com/test.php"
-    method="GET" target="_blank">
-    <div class="container">
-        <div class="item-1">
-            <label for="name">Nimi</label>
-        </div>
-        <div class="item-2">
-            <input type="text" id="name" name="nimi">
-        </div>
-        <div class="item-3">
-            <label for="vuosikurssi">Vuosikurssi</label>
-        </div>
-        <div class="item-4">
-            <input type="password" id="password" name="password">
-        </div>
-        <div class="item-5">
-            <label for="course">Kurssin nimi</label>
-        </div> 
-        <div class="item-6">
-            <select name="kurssi" id="course">
-                <option value="WO">Web-Ohjelmointi</option>
-                <option value="OO">Olio-Ohjelmointi</option>
-                <option value="OP">Ohjelmoinnin perusteet</option>
-            </select>
-        </div>
-        <div class="item-7">
-            <label for="course_type">Kurssin tyyppi</label>
-        </div>
-        <div class="item-8">
-            <select name="kurssityyppi" id="course_type">
-                <option value="P">Perus</option>
-                <option value="L">Laajennettu</option>
-                <option value="V">Vapaaehtoinen</option>
-            </select>
-        </div>
-        <div class="item-9">
-            <label>Sukupuoli</label>
-        </div>
-        <div class="item-10">
-            <input type="radio" id="rb1" name="mies"><label for="rb3">Mies</label>
-            <input type="radio" id="rb2" name="nainen"><label for="rb2">Nainen</label>
-            <input type="radio" id="rb3" name="muu"><label for="rb3">Muu</label>
-        </div>
-        <div class="item-11">
-            <label>Harrastukset</label>
 
+<body>
+    <form action="http://animalhospital.freemyip.com/test.php" method="GET" target="_blank">
+        <div class="container">
+            <div class="item-1">
+                <label for="name">Nimi</label>
+            </div>
+            <div class="item-2">
+                <input type="text" id="name" name="nimi">
+            </div>
+            <div class="item-3">
+                <label for="vuosikurssi">Vuosikurssi</label>
+            </div>
+            <div class="item-4">
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="item-5">
+                <label for="course">Kurssin nimi</label>
+            </div>
+            <div class="item-6">
+                <select name="kurssi" id="course">
+                    <option value="WO">Web-Ohjelmointi</option>
+                    <option value="OO">Olio-Ohjelmointi</option>
+                    <option value="OP">Ohjelmoinnin perusteet</option>
+                </select>
+            </div>
+            <div class="item-7">
+                <label for="course_type">Kurssin tyyppi</label>
+            </div>
+            <div class="item-8">
+                <select name="kurssityyppi" id="course_type">
+                    <option value="P">Perus</option>
+                    <option value="L">Laajennettu</option>
+                    <option value="V">Vapaaehtoinen</option>
+                </select>
+            </div>
+            <div class="item-9">
+                <label>Sukupuoli</label>
+            </div>
+            <div class="item-10">
+                <input type="radio" id="rb1" name="mies"><label for="rb3">Mies</label>
+                <input type="radio" id="rb2" name="nainen"><label for="rb2">Nainen</label>
+                <input type="radio" id="rb3" name="muu"><label for="rb3">Muu</label>
+            </div>
+            <div class="item-11">
+                <label>Harrastukset</label>
+
+            </div>
+            <div class="item-12">
+                <input type="checkbox" name="hobbies-uinti" id="cb1"><label for="cb1">Uinti</label>
+                <input type="checkbox" name="hobbies-kalastus" id="cb2"><label for="cb2">Kalastus</label>
+                <input type="checkbox" name="hobbies-juoksu" id="cb3" checked><label for="cb3">Juoksu</label>
+                <input type="checkbox" name="hobbies-tennis" id="cb4"><label for="cb4">Tennis</label>
+            </div>
+            <div class="item-13">
+                <input type="reset" value="Tyhjennä">
+            </div>
+            <div class="item-14">
+                <input type="submit" value="Lähetä">
+            </div>
         </div>
-        <div class="item-12">
-            <input type="checkbox" name="hobbies-uinti" id="cb1" ><label for="cb1">Uinti</label>
-        <input type="checkbox" name="hobbies-kalastus" id="cb2"><label for="cb2">Kalastus</label>
-        <input type="checkbox" name="hobbies-juoksu" id="cb3" checked><label for="cb3">Juoksu</label>
-        <input type="checkbox" name="hobbies-tennis" id="cb4"><label for="cb4">Tennis</label>
-        </div>
-        <div class="item-13">
-            <input type="reset" value="Tyhjennä">
-        </div>
-        <div class="item-14">
-            <input type="submit" value="Lähetä">
-        </div>
-    </div>
 
 
     </form>
 </body>
+
 </html>
