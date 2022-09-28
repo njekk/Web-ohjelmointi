@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KT12</title>
     <style>
-        .container{
+        .container {
             flex-wrap: wrap;
             border: 5px solid black;
+            display: flex;
+            height: 800px;
+            align-content: flex-start;
+            padding: 3px;
+            margin: -8px;
+            align-items: stretch;
+            justify-content: baseline;
         }
-        .container > div{
+
+        .container>div {
             background-color: aqua;
+            border: 4px solid white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+
+        }
+        .item-1{
+            flex-basis: 100%;
+            text-align: center;
+            height: 90px;
+        }
+        .item-2{
+            flex-basis: 100%;
+        }
+        .item-3{
+            flex-basis: 80%;
+            height: 350px;
+            float: right;
+            display: block;
+        }
+        .item-4{
+            flex: 1 auto;
+            display: block;
+            height: 350px;
+            float: right;
+            text-align: left;
+        }
+        .item-5{
+            flex-basis: 100%;
+            text-align: center;
+            height: 90px;
+        }
+        p{
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="item-1">
             <header>
-                <h1>Header</h1>
+                <h1>headeri</h1>
             </header>
         </div>
         <div class="item-2">
             <nav>
-                <a href="#art1">ensimmäiseen</a>
-                <a href="#art2">toiseen</a>
+                <a href="#art1">Ensimmäiseen</a>
+                <a href="#art2">Toiseen</a>
             </nav>
         </div>
         <div class="item-3">
-                <article id="art1">
-                    <h2>Artikkeli 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    </p>
-                    <h2>Artikkeli 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    </p>
-                </article>
+            <article >
+                <h3 id="art1">Artikkeli 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <h3 id="art2">Artikkeli 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </article>
         </div>
-    </div>
-    
+        <div class="item-4">
+            <aside>
+                <pre>
+Tämä
+
+
+on 
+
+
+sivusssa
+
+
+ja 
+
+
+koostuu
+
+
+vaikka
+
+
+mainoksista
+
+                </pre>
+            </aside>
+        </div>
+        <div class="item-5">
+            <footer>
+                <h1>footeri</h1>
+            </footer>
+        </div>
+
 </body>
+
 </html>
