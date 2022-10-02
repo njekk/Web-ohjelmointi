@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 15%;
+        }
+        input[type="submit"]{
+            background-image:url(951968264748171304.png);
+            background-size: contain;
+            padding: 50px;
+                        
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+        <tr>
+            <td>
+                <form action="http://animalhospital.freemyip.com/test.php" method="get">
+                    <label for="etunimi">Etunimi</label>
+                    <input type="text" name="etunimi" id="etunimi" style="margin-left: 24px;"><br>
+                    <label for="vuosikurssi">Vuosikurssi</label>
+                    <input type="password" id="vuosikurssi"> <br>
+                    <label for="oppilaitos">Oppilaitos</label>
+                    <input type="text" name="oppilaitos" id="oppilaitos" value="Savonia AMK" disabled
+                        style=" margin-left:9px">
+            <td>
+            <td>
+                <select name="Kurssin nimi" id="knimi" style="padding-right:4px" multiple>
+                    <optgroup>
+                        <option value="knimi1"> Kurssi1</option>
+                        <option value="knimi2"> Kurssi2</option>
+                        <option value="knimi3"> Kurssi3</option>
+                    </optgroup>
+                    <optgroup>
+                        <option value="knimi1"> Kurssi11</option>
+                        <option value="knimi2"> Kurssi22</option>
+                        <option value="knimi3"> Kurssi33</option>
+                    </optgroup>
+                </select> <br>
+                <select name="Kurssin tyyppi" id="ktyyppi">
+                    <option value="etä">Etä</option>
+                    <option value="fyysinen">fyysinen</option>
+                </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <fieldset style="padding-right:27px">
+                    <legend>Sukupuoli</legend>
+                    <input type="radio" name="Mies" id="mies" value="mies">
+                    <label for="mies">Mies</label>
+                    <input type="radio" name="Nainen" id="nainen" value="nainen">
+                    <label for="nainen">Nainen</label>
+                    <input type="radio" name="Muu" id="muu" value="muu">
+                    <label for="muu">Muu</label> <br>
+                </fieldset>
+            </td>
+            <td></td>
+
+
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Harrastukset</legend>
+                    <input type="checkbox" name="harrastus1" id="chb1">
+                    <label for="chb1">Jalkapallo</label><br>
+                    <input type="checkbox" name="harrastus2" id="chb2">
+                    <label for="chb1">Jääkiekko</label><br>
+                    <input type="checkbox" name="harrastus3" id="chb3" checked>
+                    <label for="chb1">Lentopallo</label><br>
+                    <input type="checkbox" name="harrastus4" id="chb4">
+                    <label for="chb1">Koripallo</label><br>
+                </fieldset>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>
+                <br><input type="submit" value="">
+                <input type="reset" value="tyhjää">
+            </td>
+            <td></td>
+        </tr>
+        </form>
+        </tr>
+    </table>
+</body>
+
+</html>
+<br><br>
