@@ -8,10 +8,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+        <style>
+            #footer{
+                background-color: #000000;
+                color: #ffffff;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+            }
+
+        </style>
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-sm bg-info">
+    <nav class="navbar navbar-expand-sm bg-info p-4">
         <a class="navbar-brand" href="#"><img src="savonia.png" alt=""></a>
             <form class="form-control-sm">
                 <input type="text" class="form-control-sm" placeholder="Tunnus">
@@ -38,7 +51,54 @@
                 </ul>
             </div>
     </nav>
+    <div class="position-relative " id="box">  
+        <div class="col-md-4">
+            <div class="">
+                <input type="text" class="form-control-sm">
+            </div>
+        </div>
+    
+        <div class="col-md-8 ms-auto">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Opintojakso</th>
+                        <th>Suorituspvm</th>
+                        <th>Arvosana</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ohjelmoinnin perusteet</td>
+                        <td>3.4.2016</td>
+                        <td>2/5</td>
+                    </tr>
+                    <tr>
+                        <td>Tietorakenteet ja algoritmit</td>
+                        <td>16.2.2016</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <td>Matematiikka I</td>
+                        <td>28.1.2015</td>
+                        <td>4/5</td>
+                    </tr>
+                    <tr>
+                        <td>Matematiikka II</td>
+                        <td>11.9.2015</td>
+                        <td>3/5</td>
+                    </tr>
+                    <tr>
+                        <td>Fysiikka I</td>
+                        <td>11.9.2014</td>
+                        <td>4/5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
 
+    </div>
 
 
     <footer class="card-footer fixed-bottom">
