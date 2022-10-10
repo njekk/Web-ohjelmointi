@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 3</title>
+</head>
+
+<body>
+    <p id="oma1">Tätä voidaan ehkä muuttaa</p>
+    <p id="oma2">Tätäkin voidaan ehkä muuttaa</p>
+    <img id="kuva">
+    <p>moi jesse</p>
+    <script>
+        "use strict";
+        /* alertilla voidaan ilmoittaa jotain */
+        alert('testi');
+        /*promtilla voidaan kysyä käyttäjältä tietoja*/
+        var nimi = prompt("Mikä on nimesi?");
+        /*console.log tekee "tulostuksen" selaimen konsoliin*/
+        console.log(nimi); 
+        if (confirm(`Oletko varma, että olet ${nimi}?`)) {
+            /*tällä saadaan muutettua yksittäisen html-elementin sisältöä*/
+            document.getElementById('oma1').innerHTML = nimi;
+        } else document.getElementById('oma1').innerHTML = "onpas epävarmaa";
+        if (nimi == "Taikaa") { 
+            /*Tällä tavoin voi lisätä elementtiin attribuutteja*/
+            document.getElementById('kuva').src = "https://media0.giphy.com/media/3o84U6421OOWegpQhq/200.gif";
+        };
+    </script>
+    
+</body>
+
+</html>
