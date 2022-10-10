@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="otsikko">Hienoja juttuja</h1>
+        <ul id="lista">
+            <li>Eka</li>
+        </ul>
+        <input type="number" id="numero"><br>
+        <button id="nappi" onclick="listaanTavaraa()">Lisää listaan</button><br>
+        <button id="nappi3" onclick="listaan('tekstiä', 'lisätty')">Lisää tekstiä listaan</button><br>
+        <button id="nappi5" onclick="ikalistaan()">Kysy ikä ja pistä listaan</button><br>
+        <button id="nappi6" onclick="piilotaJuttuja()">piilotetaan asioita</button><br>
+        <button id="nappi7" onclick="tuoEsiin()">Tuodaan takaisin esiin asioita</button><br>
+    </div>
+    <script>
+
+        /* tämä on yksi tapa miten voidaan määrittää funktio*/
+        var omafunktioKutsuja = 0; // "ns. globaali muuttuja"
+
+        function omaFunktio() {
+            omafunktioKutsuja++;
+            console.log("Oma funktio kutsuttu " + omafunktioKutsuja + " kertaa");
+            let moi = "moikka!";
+            return moi;
+        
+        }
+
+        var muuttuja = omaFunktio();
+        console.log(muuttuja)
+
+        function listaanTavaraa() {
+            //Haetaan tietoa toisesta elementistä: input
+            var numero = document.getElementById("numero").value;
+            console.log(numero);
+            // elementin sisältö eli alku- ja lopputägin välinen sisältö
+            var sisalto = document.getElementById("otsikko").innerHTML;
+            //luodaan uusi elementti
+            var elementti = document.createElement("li");
+            elementti.innerHTML = numero + ": " + sisalto;
+            // sijoitetaan ul elementin sisälle
+            document.getElementById("lista").appendChild(elementti);
+        
+            
+        }
+
+        /* parametrejä voi lisätä pilkulla erotettuna*/
+        function listaan(text, promptxt) {
+            // oletusarvon määrittäminen parametrille
+            promptxt = promptxt || 'tyhjä';
+            var alkio = document.createElement("li"); // <li> </li>
+            alkio.innerHTML = text; // <li>text</li>
+            // sijoitetaan ul elementin sisälle
+            document.getElementById("lista").appendChild(alkio);
+            if (typeof (promptxt) != "undefined") // toinen tapa käsitellä "käyttämättömiä" parametreja
+                alert(promptxt);
+        }
+
+        /* funktionaalinen tapa määrittää ja käyttää funktioita: */
+        let ikalistaan = function () {
+            // voidaan kysyä käyttäjältä tietoja
+            var ika = prompt("Anna ikäsi");
+            // voidaan silti kutsua funktiota, vaikkei anneta kaikkia parametreja
+            listaan(ika);
+        }
+
+        function piilotaJuttuja() {
+            // tyylin muuttaminen suoraan elementille
+            document.getElementById("otsikko").style.visibility = "hidden";
+        }
+
+        function tuoEsiin() {
+            document.getElementById("otsikko").style.visibility= "visible";
+            // on mahdollista myös epäsuoraan muuttaa tyylejä
+            document.getElementById("otsikko").parentElement.style.backgroundColor = "hotpink";
+        
+        }
+    </script>
+</body>
+
+</html>

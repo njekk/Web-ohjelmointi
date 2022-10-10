@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrayt</title>
+</head>
+
+<body>
+    <p>KS. konsoli</p>
+    <script>
+        /* Näin voidaan luoda tyhjä taulukko*/
+        var k = [];
+        /* Näin merkkijonoja sisältävä taulukko*/
+        var hedelmat = ["omena", "banaani", "päärynä", "mansikka"];
+        
+        hedelmat.push("luumu"); //Lisää
+        var poistettu=hedelmat.pop(); //poistaa viimeisen ja antaa sen muuttujalle arvoksi
+        hedelmat.splice(1,1); //poistaa banaanin
+        hedelmat.push("banaani");
+        /*Taulukossa voi olla mitä tahansa: */
+        var jannitys = ["keksi", 9, {enimi: "nik", snimi: "jek", function(){alert("ok");}}];
+        
+        // taulukoiden läpikäynti
+        var nimet =["Jaska", "Ville", "Bertta", "Paavo"];
+
+        // for-loopit
+        // "perinteinen"
+        for (let i = 0; i < nimet.length; i++) {
+            console.log(nimet[i]);
+        }
+        
+        // for in
+        for (var i in nimet) {
+            console.log(nimet[i]);
+        }
+        //for of
+        for (const iterator of hedelmat) {
+            console.log(iterator); 
+        }
+        var i = 0;
+        //while loop
+        while (nimet.length > i) {
+            console.log(nimet[i]);
+            i++;
+        }
+        
+        /*Javascriptillä on myös do-while, break ja continue käytössä*/
+        i = 0
+        do {
+            console.log(i+1 +". "+nimet[i]);
+            i++;
+        } while (nimet.length > i);
+        
+    </script>
+
+</body>
+
+</html>
