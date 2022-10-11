@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T22</title>
+</head>
+<body>
+    <p>Syötä kirjoittamasi sanat painamalla nappia</p>
+    <input type="text" id="input"><br>
+    <button id="enter" onclick="addInput()">Lisää</button>
+    <p id="p1">Olet syöttänyt seuraavat merkkijonot:</p>
+    <ul id="inputted">
+        
+    </ul>
+    
+    <p id="shortest">Lyhyin syöttämäsi merkkijono on: </p>
+    <p id="longest">Pisin syöttämäsi merkkijono on: </p>
+    <script>
+        "use strict";
+        var inputs = [];
+        document.getElementById("p1").style.visibility= "hidden";
+
+        function addInput() {
+            var input = document.getElementById("input").value;
+            if(input != "") {
+                inputs.push(input);
+                document.getElementById("input").value = "";
+                addtolist(input);
+                checkLength();
+            }
+        }
+        function addtolist(addthis){
+            if(inputs.length==1){
+                document.getElementById("p1").style.visibility= "visible";
+            }
+
+            if (addthis != "") {
+                var list = document.getElementById("inputted");
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(addthis));
+                list.appendChild(li);
+            }
+        }
+        function checkLength() {
+            var shortest = inputs[0];
+            var longest = inputs[0];
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].length < shortest.length) {
+                    shortest = inputs[i];
+                }
+                if (inputs[i].length > longest.length) {
+                    longest = inputs[i];
+                }
+            }
+            document.getElementById("shortest").innerHTML = "Lyhyin syöttämäsi merkkijono on: " + shortest;
+            document.getElementById("longest").innerHTML = "Pisin syöttämäsi merkkijono on: " + longest;
+            console.log(shortest);
+            console.log(longest);
+        }
+        
+
+    </script>
+</body>
+</html>

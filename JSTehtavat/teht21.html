@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T21</title>
+</head>
+<body>
+    <p>Katso konsoliin</p>
+    <script>
+        "use strict";
+        var rad = prompt("Anna säde");
+        function countCapacity(rad) {
+            var pi = 3.141592653589793;
+            var capcty = 4 * pi * (rad*rad*rad) / 3;
+            return capcty;
+        }
+        var capcty = countCapacity(rad);
+        console.log(`Säde: ${rad}`);
+        console.log(`Tilavuus: ${capcty}`);
+    </script>
+</body>
+</html>
