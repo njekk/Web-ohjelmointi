@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teht28</title>
+</head>
+
+<body>
+    <nav><a href="#Ensimmainen" onclick="showFirst()" style="font-size: larger;">Tästä ensimmäinen artikkeli näkyviin</a><br>
+    <a href="#Toinen" onclick="showSecond()"style="font-size: larger;">Tästä toinen artikkeli näkyviin </a><br>
+        <a href="#Kolmas" onclick="showThird()"style="font-size: larger;">Tästä kolmas artikkeli näkyviin </a><br>
+        <a href="#Neljäs" onclick="showFourth()"style="font-size: larger;">Tästä neljäs artikkeli näkyviin </a></nav>
+    <article id="Ensimmainen">
+     <h1>Tässä artikkelissa tutustutaan hieman karhuihin :)</h1>   
+    </article>
+    <article id="Toinen">
+     <h1>Tämä artikkeli vie sinut uuteen ulottuvuuteen.</h1>   
+    </article>
+    <article id="Kolmas">
+     <h1>Tähän artikkeliin on piilotettu jotain löydätkö<a href="https://youtu.be/5Jhkawgi1us?t=15" style="color: white ;">.</a>sen ilman koodin katsomista?</h1>   
+    </article>
+    <article id="Neljas">
+        <h1>Tämä on viimeinen artikkeli ja tässä emme tee mitään outoa.</h1>
+    </article>
+    <script>
+        "use strict";
+        var Artikkeli1 = document.getElementById("Ensimmainen");
+        var Artikkeli2 = document.getElementById("Toinen");
+        var Artikkeli3 = document.getElementById("Kolmas");
+        var Artikkeli4 = document.getElementById("Neljas");
+        Artikkeli1.style.visibility = "visible";
+        Artikkeli2.style.visibility = "hidden";
+        Artikkeli3.style.visibility = "hidden";
+        Artikkeli4.style.visibility = "hidden";
+        function showFirst() {
+            Artikkeli1.style.visibility = "visible";
+            Artikkeli2.style.visibility = "hidden";
+            Artikkeli3.style.visibility = "hidden";
+            Artikkeli4.style.visibility = "hidden";
+        }
+        function showSecond() {
+            Artikkeli1.style.visibility = "hidden";
+            Artikkeli2.style.visibility = "visible";
+            Artikkeli3.style.visibility = "hidden";
+            Artikkeli4.style.visibility = "hidden";
+        }
+        function showThird() {
+            Artikkeli1.style.visibility = "hidden";
+            Artikkeli2.style.visibility = "hidden";
+            Artikkeli3.style.visibility = "visible";
+            Artikkeli4.style.visibility = "hidden";
+        }
+        function showFourth() {
+            Artikkeli1.style.visibility = "hidden";
+            Artikkeli2.style.visibility = "hidden";
+            Artikkeli3.style.visibility = "hidden";
+            Artikkeli4.style.visibility = "visible";
+        }
+    </script>
+</body>
+
+</html>

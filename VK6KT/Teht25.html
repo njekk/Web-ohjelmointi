@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teht25</title>
+</head>
+
+<body>
+    <label for="Date" id="Label">Kirjoita syntymäaikasi: </label>
+    <input type="date" id="BirthDay" max="11.11.2022">
+    <br>
+    <button onclick="LaskeIka()">Tarkistetaanpa</button>
+    <script>
+        "use strict";
+        function LaskeIka() {
+            var Syntymapaiva = document.getElementById("BirthDay").value;
+            var d = new Date(Syntymapaiva);
+            var vuosi = d.getFullYear();
+            var kuukausi = d.getMonth();
+            var paiva = d.getDay();
+            if (vuosi < "1900" || vuosi > 2022) {
+                document.getElementById("Varoitus").innerHTML = "Vuoden täytyy olla välilt 1900-2022";
+            }
+            if(Syntymapaiva == ""){
+                document.getElementById("Varoitus").innerHTML = "Et voi laittaa tyhjää";
+            }
+            else
+            {
+                let ThisDate = new Date();
+                ThisDate = ThisDate.getFullYear();
+                ThisDate = ThisDate - vuosi;
+                document.getElementById("Ikasi").innerHTML = "Sinun syntymäaikasi on " + Syntymapaiva;
+                document.getElementById("Vastaus").innerHTML = "Ikäsi on : " + ThisDate + " Vuotta ";
+            }
+        }
+    </script>
+    <p id="Ikasi"></p>
+    <p id="Vastaus"></p>
+    <p id="Varoitus"></p>
+</body>
+
+</html>

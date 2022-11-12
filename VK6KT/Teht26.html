@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teht26</title>
+<style>
+    td{
+        border: 2px ridge hotpink;
+    }
+</style>
+</head>
+<body>
+    <form method="dialog" >
+        <label for="HenkNimi">Anna nimi: </label>
+        <input type="text" id="HenkNimi">
+        <br>
+        <label for="HenkOsoite">Anna Osoite: </label>
+        <input type="text" id="HenkOsoite">
+        <br>
+        <button onclick="LisaaTauluun()">Lisää henkilö tauluun</button>
+    <footer>
+        <table id="Taulukko">
+            <td id="Nimi">
+                Nimi
+            </td>
+            <td id="Osoite">
+                Osoite
+            </td>
+        </table>
+    </footer>
+</form>
+    <Script>
+        "use strict";
+        function LisaaTauluun(){
+            var nimi = document.getElementById("HenkNimi").value;
+            var osoite = document.getElementById("HenkOsoite").value;
+            var table2 = document.getElementById("Taulukko");
+            var row = table2.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            if(nimi == ""){
+                nimi = "tyhjä"
+            }
+            if(osoite == ""){
+                osoite = "tyhjä";
+            }
+            cell1.innerHTML = nimi;
+            cell2.innerHTML = osoite;
+            document.getElementById("HenkNimi").value = "";
+            document.getElementById("HenkOsoite").value = "";
+        }
+    </Script>
+</body>
+</html>
