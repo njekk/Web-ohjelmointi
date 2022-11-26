@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehtävä 34</title>
+    <style>
+        #Artikkeli1,
+        #Artikkeli2,
+        #Artikkeli3 {
+            visibility: hidden;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#EkaArtikkeli").click(function (e) {
+                e.preventDefault();
+                $("#Artikkeli1").delay(2000).fadeIn(function () {
+                    $("#Artikkeli1").css("visibility", "visible");
+                });
+                $("#Artikkeli1").delay(3000).fadeOut(function () {
+                    $("#Artikkeli1").css("visibility", "hidden");
+                });
+            });
+            $("#TokaArtikkeli").click(function (e) {
+                e.preventDefault();
+                $("#Artikkeli2").delay(2000).fadeIn(function () {
+                    $("#Artikkeli2").css("visibility", "visible");
+                });
+                $("#Artikkeli2").delay(3000).fadeOut(function () {
+                    $("#Artikkeli2").css("visibility", "hidden");
+                });
+            });
+            $("#KolmasArtikkeli").click(function (e) {
+                e.preventDefault();
+                $("#Artikkeli3").delay(2000).fadeIn(function () {
+                    $("#Artikkeli3").css("visibility", "visible");
+                });
+                $("#Artikkeli3").delay(3000).fadeOut(function () {
+                    $("#Artikkeli3").css("visibility", "hidden");
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <form action="get">
+        <a href="" id="EkaArtikkeli">Tästä ekaan</a> <a href="" id="TokaArtikkeli">Tästä toiseen</a> <a href=""
+            id="KolmasArtikkeli">Tästä kolmanteen</a>
+        <article id="Artikkeli1">Tässä olis eka artikkeli</article>
+        <article id="Artikkeli2">Tämä on toinen artikkeli</article>
+        <article id="Artikkeli3">Ja kolmatta viedään hahaa katoan kolmen sekunnin kuluttua</article>
+    </form>
+</body>
+
+</html>
